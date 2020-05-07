@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "woolplates",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Wool Plates",
+  "description": "Adds pressure plates made out of wool",
   "authors": [
-    "Me!"
+    "Willbl3pic",
+    "bl4ckscor3"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://curseforge.com/minecraft/mc-mods/woolplates-fabric",
+    "sources": "https://github.com/williambl/woolplates-fabric"
   },
 
-  "license": "CC0-1.0",
+  "license": "GPL-3",
   "icon": "assets/modid/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.williambl.woolplates.WoolPlates"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
   ],
 
   "depends": {
@@ -32,6 +32,5 @@
     "minecraft": "1.15.x"
   },
   "suggests": {
-    "flamingo": "*"
   }
 }
