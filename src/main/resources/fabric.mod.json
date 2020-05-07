@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "com.williambl.woolplates.WoolPlates"
+    ],
+    "modmenu": [
+      "com.williambl.woolplates.WoolPlatesModMenuCompat"
     ]
   },
   "mixins": [

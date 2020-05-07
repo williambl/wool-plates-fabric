@@ -1,5 +1,7 @@
 package com.williambl.woolplates;
 
+import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
+import me.sargunvohra.mcmods.autoconfig1u.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -16,7 +18,7 @@ import java.util.List;
 
 public class WoolPlates implements ModInitializer {
 
-    private static final String MODID = "woolplates";
+    public static final String MODID = "woolplates";
 
     private static final String[] COLORS = new String[] {
             "white",
@@ -39,6 +41,7 @@ public class WoolPlates implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        AutoConfig.register(WoolPlatesConfig.class, Toml4jConfigSerializer::new);
         final List<Block> blocks = new ArrayList<>();
         for (int i = 0; i < COLORS.length; i++) {
             blocks.add(new WoolPressurePlate(FabricBlockSettings.of(Material.WOOL).noCollision().hardness(0.5f).sounds(BlockSoundGroup.WOOL).build()));

@@ -15,5 +15,6 @@
     "block.woolplates.wool_plate_brown": "Brown Wool Pressure Plate",
     "block.woolplates.wool_plate_green": "Green Wool Pressure Plate",
     "block.woolplates.wool_plate_red": "Red Wool Pressure Plate",
-    "block.woolplates.wool_plate_black": "Black Wool Pressure Plate"
+    "block.woolplates.wool_plate_black": "Black Wool Pressure Plate",
+    "text.autoconfig.woolplates.option.enableSound": "Enable Wool Pressure Plate sound"
 }
