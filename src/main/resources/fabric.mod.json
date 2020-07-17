@@ -6,7 +6,7 @@
   "name": "Wool Plates",
   "description": "Adds pressure plates made out of wool",
   "authors": [
-    "Willbl3pic",
+    "Will BL",
     "bl4ckscor3"
   ],
   "contact": {
@@ -32,7 +32,7 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.15.x"
+    "minecraft": ">=1.16"
   },
   "suggests": {
   }

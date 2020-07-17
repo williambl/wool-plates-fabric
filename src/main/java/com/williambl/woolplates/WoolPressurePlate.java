@@ -6,8 +6,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 
 public class WoolPressurePlate extends PressurePlateBlock {
     protected WoolPressurePlate(Settings settings) {
@@ -20,13 +21,13 @@ public class WoolPressurePlate extends PressurePlateBlock {
     }
 
     @Override
-    protected void playDepressSound(IWorld world, BlockPos pos) {
+    protected void playDepressSound(WorldAccess world, BlockPos pos) {
         if (AutoConfig.getConfigHolder(WoolPlatesConfig.class).getConfig().enableSound)
             world.playSound(null, pos, SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_OFF, SoundCategory.BLOCKS, 0.3f, 0.8f);
     }
 
     @Override
-    protected void playPressSound(IWorld world, BlockPos pos) {
+    protected void playPressSound(WorldAccess world, BlockPos pos) {
         if (AutoConfig.getConfigHolder(WoolPlatesConfig.class).getConfig().enableSound)
             world.playSound(null, pos, SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_ON, SoundCategory.BLOCKS, 0.3f, 0.8f);
     }

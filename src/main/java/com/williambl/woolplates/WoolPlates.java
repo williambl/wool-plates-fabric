@@ -4,6 +4,7 @@ import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
@@ -44,7 +45,7 @@ public class WoolPlates implements ModInitializer {
         AutoConfig.register(WoolPlatesConfig.class, Toml4jConfigSerializer::new);
         final List<Block> blocks = new ArrayList<>();
         for (int i = 0; i < COLORS.length; i++) {
-            blocks.add(new WoolPressurePlate(FabricBlockSettings.of(Material.WOOL).noCollision().hardness(0.5f).sounds(BlockSoundGroup.WOOL).build()));
+            blocks.add(new WoolPressurePlate(AbstractBlock.Settings.of(Material.WOOL).noCollision().strength(0.5f).sounds(BlockSoundGroup.WOOL)));
             Registry.register(Registry.BLOCK, new Identifier(MODID, "wool_plate_"+COLORS[i]), blocks.get(i));
             Registry.register(Registry.ITEM, new Identifier(MODID, "wool_plate_"+COLORS[i]), new BlockItem(blocks.get(i), new Item.Settings().group(ItemGroup.REDSTONE)));
         }
